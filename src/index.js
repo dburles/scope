@@ -44,7 +44,7 @@ const update = () => {
   frames += 1;
   const points = inputBuffer.map((n) => {
     return n < 0
-      ? Math.round((Math.abs(n) * range) / 2) + range / 2
+      ? range / 2 + Math.round((Math.abs(n) * range) / 2)
       : range / 2 - Math.round((n * range) / 2);
   });
 
